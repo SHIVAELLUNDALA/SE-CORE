@@ -1,67 +1,105 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>SE CORE BUSINESS SOLUTIONS</title>
-
-<style>
-body{
-font-family:Arial;
-margin:0;
-text-align:center;
-background:#0b3d6b;
-color:white;
-}
-
-header{
-padding:40px;
-font-size:30px;
-}
-
-.section{
-padding:40px;
-}
-
-button{
-padding:10px 20px;
-background:orange;
-border:none;
-color:white;
-font-size:16px;
-}
-</style>
-
+<meta charset="UTF-8">
+<title>SE Core Business Solutions</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-SE CORE BUSINESS SOLUTIONS
+<h1>SE Core Business Solutions</h1>
+<p>Operational Auditing, Merchandising & Manpower Solutions</p>
+
+<button onclick="scrollToForm()">Request Business Quote</button>
 </header>
 
-<div class="section">
-<h2>External Audits & POSM Deployment</h2>
-<p>Professional field audit services across South India</p>
+<section class="stats">
 
-<button>Contact Us</button>
+<div>
+<h2>7+</h2>
+<p>Years Experience</p>
 </div>
 
-<div class="section">
+<div>
+<h2>1000+</h2>
+<p>Audits Conducted</p>
+</div>
+
+<div>
+<h2>50+</h2>
+<p>Field Executives</p>
+</div>
+
+<div>
+<h2>100+</h2>
+<p>Client Locations</p>
+</div>
+
+</section>
+
+<section class="services">
+
 <h2>Our Services</h2>
 
-<p>✔ Store Audits</p>
-<p>✔ POSM Deployment</p>
-<p>✔ Field Verification</p>
-
+<div class="card">
+<h3>Business Auditing</h3>
+<p>Retail store audits, compliance verification.</p>
 </div>
 
-<div class="section">
-<h2>Clients</h2>
-
-<p>MedPlus</p>
-<p>Airtel</p>
-<p>Reliance</p>
-
+<div class="card">
+<h3>Retail Merchandising</h3>
+<p>Visual merchandising & stock verification.</p>
 </div>
+
+<div class="card">
+<h3>Professional Manpower</h3>
+<p>Field executives and operational support.</p>
+</div>
+
+</section>
+
+<section class="team">
+
+<h2>Our Team</h2>
+
+<div class="member">
+<h3>Shiv Ellundala</h3>
+<p>Founder</p>
+</div>
+
+<div class="member">
+<h3>Ganesh Keta</h3>
+<p>Consultant</p>
+</div>
+
+<div class="member">
+<h3>Sabeeha Begum</h3>
+<p>Project Lead</p>
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact Us</h2>
+
+<form id="contactForm">
+
+<input type="text" name="name" placeholder="Name" required>
+<input type="email" name="email" placeholder="Email" required>
+<input type="text" name="phone" placeholder="Phone" required>
+
+<textarea name="message" placeholder="Message"></textarea>
+
+<button type="submit">Submit</button>
+
+</form>
+
+</section>
+
+<script src="script.js"></script>
 
 </body>
 </html>
