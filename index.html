@@ -3,78 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SE Core | Audit & Deployment Solutions</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>SE Core Business Solutions | Audit & Deployment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #0056b3; /* Professional Blue */
-            --dark: #1a1a1a;
-            --light: #f8f9fa;
-        }
-        body { font-family: 'Inter', sans-serif; margin: 0; color: var(--dark); line-height: 1.6; }
+        :root { --primary: #0056b3; --dark: #333; --bg: #f4f7f6; }
+        body { font-family: 'Inter', sans-serif; margin: 0; color: var(--dark); background: var(--bg); }
         
-        /* Professional Hero Section */
+        /* Fixed Header */
+        header { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-weight: bold; font-size: 24px; color: var(--primary); text-decoration: none; }
+        
+        /* Hero Section with fixed image path */
         .hero { 
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600'); 
-            background-size: cover;
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=1600'); 
+            background-size: cover; background-position: center;
+            color: white; padding: 80px 20px; text-align: center;
         }
 
-        /* Fixing the Form Styling */
-        .enquiry-container { max-width: 600px; margin: -50px auto 50px; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        h2 { color: var(--primary); text-align: center; }
-        input, select, textarea { 
-            width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;
+        /* Enquiry Form Card */
+        .form-section { max-width: 500px; margin: -60px auto 40px; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
+        .form-section h2 { margin-top: 0; color: var(--primary); text-align: center; font-size: 20px; }
+        input, select, textarea { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 6px; font-family: inherit; box-sizing: border-box; }
+        
+        .submit-btn { 
+            width: 100%; background: var(--primary); color: white; border: none; padding: 15px; 
+            font-weight: bold; border-radius: 6px; cursor: pointer; font-size: 16px; transition: 0.3s;
         }
-        button { 
-            width: 100%; padding: 15px; background: var(--primary); color: white; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; transition: 0.3s;
-        }
-        button:hover { background: #004494; }
+        .submit-btn:hover { background: #004494; transform: translateY(-2px); }
 
-        /* Grid for Services */
-        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 50px 10%; background: var(--light); }
-        .card { background: white; padding: 20px; border-top: 5px solid var(--primary); text-align: center; }
+        /* Trusted Brands */
+        .brands { padding: 40px 10%; text-align: center; background: white; }
+        .brand-grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; align-items: center; opacity: 0.7; }
+        .brand-grid img { height: 35px; }
+
+        /* Fix for hidden images */
+        .img-placeholder { background: #eee; padding: 20px; border-radius: 8px; font-style: italic; color: #888; }
     </style>
 </head>
 <body>
 
+    <header>
+        <a href="#" class="logo">SE CORE</a>
+        <nav><strong>Pan-India Audit Services</strong></nav>
+    </header>
+
     <section class="hero">
-        <h1>Precision Retail Audits & POSM Deployment</h1>
-        <p>Serving leading brands across Pan India with excellence.</p>
+        <h1>Enterprise Retail Audit Solutions</h1>
+        <p>POSM Deployment • Visual Merchandising • Stock Audits</p>
     </section>
 
-    <div class="enquiry-container">
-        <h2>Request a Quote</h2>
+    <div class="form-section">
+        <h2>Submit Enquiry</h2>
         <form action="https://script.google.com/macros/s/AKfycbyWWHzp6yhCj5wkeaoPT_RU4rstqM_T9tK4Y8vP4WFkfGTzWQj-CJ6zzXlNaSbNTV8F/exec" method="POST">
-            <input type="text" name="name" placeholder="Contact Person Name" required>
-            <input type="text" name="company" placeholder="Agency / Company Name" required>
+            <input type="text" name="name" placeholder="Full Name" required>
             <input type="email" name="email" placeholder="Business Email" required>
             <input type="tel" name="phone" placeholder="Phone Number" required>
-            
-            <select name="service">
-                <option value="" disabled selected>Select Service Required</option>
+            <select name="service" required>
+                <option value="" disabled selected>Select Service</option>
                 <option value="External Audit">External Audit</option>
                 <option value="POSM Deployment">POSM Deployment</option>
                 <option value="Visual Merchandising">Visual Merchandising</option>
                 <option value="Stock Audit">Stock Audit</option>
             </select>
-            
-            <textarea name="message" rows="4" placeholder="Brief about your project..."></textarea>
-            <button type="submit">SUBMIT ENQUIRY</button>
+            <textarea name="message" rows="3" placeholder="Requirement Details"></textarea>
+            <button type="submit" class="submit-btn">GET A QUOTE</button>
         </form>
     </div>
 
-    <section class="services">
-        <div class="card">
-            <h3>Audit Services</h3>
-            <p>External and Stock audits with real-time reporting.</p>
-        </div>
-        <div class="card">
-            <h3>Deployment</h3>
-            <p>Professional POSM and Branding setups across South India.</p>
+    <section class="brands">
+        <p style="text-transform: uppercase; letter-spacing: 1px; font-size: 12px; margin-bottom: 20px;">Trusted by Industry Leaders</p>
+        <div class="brand-grid">
+            <span>APPLE</span>
+            <span>LENOVO</span>
+            <span>DELL</span>
+            <span>HDFC BANK</span>
         </div>
     </section>
 
