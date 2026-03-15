@@ -3,101 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SE Core Business Solutions</title>
+    <title>SE Core Business Solutions | Audit & Deployment</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .logo-scroll { display: flex; overflow: hidden; gap: 4rem; }
+        .logo-container { animation: scroll 30s linear infinite; display: flex; gap: 4rem; align-items: center; }
+        @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    </style>
 </head>
-<body class="bg-gray-50 font-sans">
+<body class="bg-slate-50 font-sans text-slate-900">
 
-    <nav class="bg-white shadow-md py-4 px-8 flex justify-between items-center sticky top-0 z-50">
-        <div class="text-2xl font-bold text-blue-900">SE CORE <span class="text-blue-600 text-sm block leading-none">BUSINESS SOLUTIONS</span></div>
-        <div class="hidden md:flex space-x-6 font-medium text-gray-700">
-            <a href="#" class="hover:text-blue-600">Home</a>
-            <a href="#" class="hover:text-blue-600">About Us</a>
-            <a href="#" class="hover:text-blue-600">Services</a>
-            <a href="#" class="hover:text-blue-600">Clients</a>
-            <a href="#" class="hover:text-blue-600">Contact</a>
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200 py-4 px-6 md:px-12 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <div class="bg-blue-900 text-white p-2 rounded-lg font-bold text-xl">SE</div>
+            <div>
+                <span class="block font-black text-blue-900 leading-none">CORE</span>
+                <span class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Business Solutions</span>
+            </div>
         </div>
-        <button class="bg-orange-500 text-white px-5 py-2 rounded-full font-bold">+91 XXXXXXXX</button>
+        <div class="hidden md:flex gap-8 font-semibold text-slate-600">
+            <a href="#" class="hover:text-blue-900">Home</a>
+            <a href="#services" class="hover:text-blue-900">Services</a>
+            <a href="#enquiry" class="hover:text-blue-900">Enquiry</a>
+        </div>
+        <a href="#enquiry" class="bg-orange-500 text-white px-6 py-2 rounded-full font-bold shadow-lg shadow-orange-200 hover:bg-orange-600 transition">Get Quote</a>
     </nav>
 
-    <header class="relative bg-blue-900 text-white py-20 px-10 overflow-hidden">
-        <div class="max-w-4xl relative z-10">
-            <h1 class="text-5xl font-extrabold mb-4 leading-tight">Audit & Deployment <br> Services Across South India</h1>
-            <p class="text-xl mb-8 opacity-90">External Audits | POSM Deployment | Visual Merchandising | Stock Audits</p>
-            <ul class="space-y-2 mb-10">
-                <li><i class="fas fa-check-circle text-orange-400 mr-2"></i> Experienced Field Team</li>
-                <li><i class="fas fa-check-circle text-orange-400 mr-2"></i> Pan South India Coverage</li>
-                <li><i class="fas fa-check-circle text-orange-400 mr-2"></i> Fast & Reliable Execution</li>
-            </ul>
-            <div class="flex space-x-4">
-                <button class="bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded font-bold transition">Request Service</button>
-                <button class="border-2 border-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded font-bold transition">Contact Us</button>
+    <section class="relative py-20 px-6 md:px-12 bg-blue-900 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="text-white">
+                <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">
+                    Audit & Deployment <br> Services South India
+                </h1>
+                <p class="text-lg text-slate-300 mb-8 max-w-lg">Providing high-quality visual merchandising, POSM deployment, and comprehensive stock audits for top-tier brands.</p>
+                <div class="flex flex-wrap gap-4">
+                    <div class="bg-white/10 px-4 py-2 rounded-lg border border-white/20 flex items-center gap-2">
+                        <i class="fas fa-check-circle text-orange-400"></i> Pan India Network
+                    </div>
+                    <div class="bg-white/10 px-4 py-2 rounded-lg border border-white/20 flex items-center gap-2">
+                        <i class="fas fa-check-circle text-orange-400"></i> Experienced Team
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="absolute inset-0 opacity-20 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1534452286362-623b18455c57?auto=format&fit=crop&w=1200&q=80');"></div>
-    </header>
-
-    <section class="py-16 px-10 max-w-7xl mx-auto text-center">
-        <h2 class="text-3xl font-bold text-blue-900 mb-2">Our Services</h2>
-        <div class="w-20 h-1 bg-blue-600 mx-auto mb-12"></div>
-        
-        <div class="grid md:grid-cols-4 gap-6">
-            <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-600">
-                <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-chart-line"></i></div>
-                <h3 class="font-bold text-lg mb-2">External Audits</h3>
-                <p class="text-gray-500 text-sm italic">Compliance & Performance Checks</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-600">
-                <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-box-open"></i></div>
-                <h3 class="font-bold text-lg mb-2">POSM Deployment</h3>
-                <p class="text-gray-500 text-sm italic">Promotional Material Installation</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-600">
-                <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-store"></i></div>
-                <h3 class="font-bold text-lg mb-2">Visual Merchandising</h3>
-                <p class="text-gray-500 text-sm italic">Brand Display Setup</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-600">
-                <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-clipboard-list"></i></div>
-                <h3 class="font-bold text-lg mb-2">Stock Audits</h3>
-                <p class="text-gray-500 text-sm italic">Inventory Verification</p>
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=800" class="rounded-3xl shadow-2xl" alt="Business Solutions">
             </div>
         </div>
     </section>
 
-    <section class="bg-white py-16 px-10 grid md:grid-cols-2 gap-12 max-w-7xl mx-auto">
-        <div>
-            <h2 class="text-3xl font-bold text-blue-900 mb-6">Get In Touch</h2>
-            <div class="space-y-6">
-                <div class="flex items-start">
-                    <i class="fas fa-map-marker-alt text-blue-600 mt-1 mr-4"></i>
-                    <p class="text-gray-700">Hyderabad, India</p>
-                </div>
-                <div class="flex items-start">
-                    <i class="fas fa-phone text-blue-600 mt-1 mr-4"></i>
-                    <p class="text-gray-700">+91 XXXXXXXXXX</p>
-                </div>
-                <div class="flex items-start">
-                    <i class="fas fa-envelope text-blue-600 mt-1 mr-4"></i>
-                    <p class="text-gray-700">info@secorebusiness.com</p>
+    <div class="bg-white py-12 border-b">
+        <div class="max-w-7xl mx-auto px-6 overflow-hidden">
+            <p class="text-center text-slate-400 font-bold uppercase tracking-widest text-xs mb-8">Trusted By Industry Leaders</p>
+            <div class="logo-scroll">
+                <div class="logo-container">
+                    <img src="images/logo1.png" alt="Client" class="h-12 grayscale opacity-50 hover:opacity-100 transition">
+                    <img src="images/logo2.png" alt="Client" class="h-12 grayscale opacity-50">
+                    <img src="images/logo3.png" alt="Client" class="h-12 grayscale opacity-50">
+                    <img src="images/logo4.png" alt="Client" class="h-12 grayscale opacity-50">
+                    <img src="images/logo1.png" alt="Client" class="h-12 grayscale opacity-50">
+                    <img src="images/logo2.png" alt="Client" class="h-12 grayscale opacity-50">
                 </div>
             </div>
         </div>
-        <div class="bg-gray-100 p-8 rounded-lg shadow-inner">
-            <h3 class="text-xl font-bold mb-6 text-blue-900">Enquiry Form</h3>
-            <form class="space-y-4">
-                <input type="text" placeholder="Name" class="w-full p-3 border rounded">
-                <input type="text" placeholder="Company Name" class="w-full p-3 border rounded">
-                <input type="text" placeholder="Phone Number" class="w-full p-3 border rounded">
-                <select class="w-full p-3 border rounded text-gray-500">
-                    <option>Service Required</option>
-                </select>
-                <textarea placeholder="Message" class="w-full p-3 border rounded h-32"></textarea>
-                <button class="w-full bg-blue-700 text-white py-3 rounded font-bold hover:bg-blue-800 transition">Send Message</button>
-            </form>
+    </div>
+
+    <section id="enquiry" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16">
+            <div>
+                <span class="text-orange-500 font-bold uppercase tracking-widest">Connect with us</span>
+                <h2 class="text-4xl font-black text-blue-900 mt-2 mb-6">Enquiry</h2>
+                <p class="text-slate-600 text-lg mb-8 leading-relaxed">Fill out the form below and our team will get back to you with a customized solution for your business audit and deployment needs.</p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-center p-4 bg-white rounded-xl shadow-sm border border-slate-100">
+                        <i class="fas fa-phone-alt text-blue-900 mr-4 text-xl"></i>
+                        <div>
+                            <p class="text-xs text-slate-400 font-bold uppercase">Phone</p>
+                            <p class="font-bold text-slate-800">+91 XXXXX XXXXX</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center p-4 bg-white rounded-xl shadow-sm border border-slate-100">
+                        <i class="fas fa-envelope text-blue-900 mr-4 text-xl"></i>
+                        <div>
+                            <p class="text-xs text-slate-400 font-bold uppercase">Email</p>
+                            <p class="font-bold text-slate-800">info@secore.in</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 md:p-10 rounded-3xl shadow-2xl shadow-blue-900/5 border border-slate-100">
+                <form id="submit-to-google-sheet" class="space-y-4">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <input name="name" type="text" placeholder="Your Name" required class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-blue-900 transition">
+                        <input name="company" type="text" placeholder="Company Name" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-blue-900 transition">
+                    </div>
+                    <input name="phone" type="tel" placeholder="Phone Number" required class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-blue-900 transition">
+                    <select name="service" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-blue-900 transition appearance-none text-slate-500">
+                        <option value="">Select Service Required</option>
+                        <option value="Audit">External Audit</option>
+                        <option value="Deployment">POSM Deployment</option>
+                        <option value="Merchandising">Visual Merchandising</option>
+                        <option value="Stock">Stock Audit</option>
+                    </select>
+                    <textarea name="message" rows="4" placeholder="How can we help?" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-blue-900 transition"></textarea>
+                    
+                    <button type="submit" id="submitBtn" class="w-full py-4 bg-blue-900 text-white font-black rounded-xl hover:bg-blue-800 transition shadow-lg shadow-blue-200 uppercase tracking-widest">
+                        Send Enquiry
+                    </button>
+                    <p id="msg" class="text-center text-sm font-bold mt-4"></p>
+                </form>
+            </div>
         </div>
     </section>
 
+    <footer class="bg-blue-950 text-white/50 py-12 text-center text-sm">
+        <p>&copy; 2026 SE Core Business Solutions. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const scriptURL = 'PASTE_YOUR_URL_HERE' // REPLACE THIS WITH YOUR DEPLOYED URL
+        const form = document.getElementById('submit-to-google-sheet')
+        const msg = document.getElementById("msg")
+        const btn = document.getElementById("submitBtn")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            btn.disabled = true
+            btn.innerHTML = "Sending..."
+            
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Success! We will contact you soon."
+                    msg.className = "text-center text-sm font-bold mt-4 text-green-500"
+                    form.reset()
+                    btn.disabled = false
+                    btn.innerHTML = "Send Enquiry"
+                    setTimeout(() => { msg.innerHTML = "" }, 5000)
+                })
+                .catch(error => {
+                    msg.innerHTML = "Error! Please try again."
+                    msg.className = "text-center text-sm font-bold mt-4 text-red-500"
+                    btn.disabled = false
+                    btn.innerHTML = "Send Enquiry"
+                })
+        })
+    </script>
 </body>
 </html>
