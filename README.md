@@ -1,1 +1,1 @@
-# SE-CORE
+# secore-website
