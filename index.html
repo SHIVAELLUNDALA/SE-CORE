@@ -4,94 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SE CORE | Audit & Deployment</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        :root { --blue: #004a99; --orange: #f37021; --light-gray: #f9f9f9; }
-        body { font-family: 'Roboto', sans-serif; margin: 0; color: #333; line-height: 1.6; }
+        :root { --blue: #004a99; --orange: #f37021; }
+        body { font-family: 'Roboto', sans-serif; margin: 0; line-height: 1.6; }
         
-        /* Header & Logo */
         header { 
             display: flex; justify-content: space-between; align-items: center; 
-            padding: 10px 8%; background: white; border-bottom: 2px solid var(--blue);
+            padding: 15px 8%; background: white; border-bottom: 2px solid var(--blue);
             position: sticky; top: 0; z-index: 1000;
         }
-        .logo img { height: 50px; }
-        .nav-links a { text-decoration: none; color: #333; margin: 0 15px; font-weight: 500; }
-        .nav-phone { background: var(--orange); color: white !important; padding: 8px 15px; border-radius: 20px; }
 
-        /* Hero Section */
+        /* --- LOGO SIZE FIX --- */
+        .logo img { 
+            height: 75px; /* Adjust this value to make it even bigger or smaller */
+            width: auto; 
+        }
+
+        .nav-links a { text-decoration: none; color: #333; margin: 0 15px; font-weight: 500; }
+        .nav-phone { 
+            background: var(--orange); color: white !important; 
+            padding: 10px 20px; border-radius: 25px; font-weight: bold;
+        }
+
         .hero { 
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1534452207294-49c81215698c?auto=format&fit=crop&w=1600'); 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1534452207294-49c81215698c?auto=format&fit=crop&w=1600'); 
             background-size: cover; height: 450px; display: flex; flex-direction: column; 
             justify-content: center; padding: 0 8%; color: white;
         }
-        .hero h1 { font-size: 38px; margin: 0; }
+        .hero h1 { font-size: 42px; margin: 0; font-weight: 700; }
         .hero p { font-size: 18px; margin: 20px 0; }
-        .hero-btns .btn { padding: 12px 25px; border-radius: 4px; text-decoration: none; font-weight: bold; margin-right: 10px; display: inline-block; }
+        
+        .btn { padding: 12px 25px; border-radius: 4px; text-decoration: none; font-weight: bold; display: inline-block; margin-right: 10px; }
         .btn-orange { background: var(--orange); color: white; }
         .btn-blue { background: var(--blue); color: white; }
-
-        /* Client Logos Section */
-        .clients-section { padding: 40px 8%; text-align: center; background: #fff; }
-        .client-grid { display: flex; justify-content: center; align-items: center; gap: 30px; flex-wrap: wrap; margin-top: 20px; }
-        .client-grid img { height: 30px; opacity: 0.8; }
-
-        /* Services Cards Grid */
-        .services-section { padding: 60px 8%; background: var(--light-gray); text-align: center; }
-        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 30px; }
-        .service-card { background: white; padding: 30px 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .service-card h4 { color: var(--blue); margin: 15px 0 10px; }
-        .service-card p { font-size: 14px; color: #666; }
-
-        /* Footer Form Section (Matching Screenshot) */
-        .footer-container { display: flex; gap: 40px; padding: 60px 8%; background: #eef2f7; }
-        .contact-details { flex: 1; }
-        .enquiry-form-card { flex: 1; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .enquiry-form-card h3 { color: var(--blue); margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        
-        input, select, textarea { width: 100%; padding: 10px; margin-bottom: 12px; border: 1px solid #ddd; border-radius: 4px; }
-        .submit-btn { width: 100%; background: var(--blue); color: white; border: none; padding: 12px; font-weight: bold; cursor: pointer; border-radius: 4px; }
-
-        /* WhatsApp Button */
-        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; text-decoration: none; z-index: 100; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-
-        @media (max-width: 768px) { .footer-container { flex-direction: column; } }
     </style>
 </head>
 <body>
 
     <header>
-        /* Updated Header and Logo Styling */
-header { 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 20px 8%; /* Increased top/bottom padding for a premium feel */
-    background: white; 
-    border-bottom: 2px solid #004a99;
-    position: sticky; 
-    top: 0; 
-    z-index: 1000;
-}
-
-.logo img { 
-    height: 80px; /* Increased from 50px to 80px */
-    width: auto;  /* Maintains aspect ratio */
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-/* Optional: Make the logo pop slightly on hover */
-.logo img:hover {
-    transform: scale(1.05);
-}
-
-/* Adjust Nav Links to stay centered with the larger logo */
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
+        <div class="logo">
+            <img src="Designer.png" alt="SE CORE">
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Services</a>
+            <a href="tel:+919866905621" class="nav-phone">📞 +91 98669 05621</a>
+        </div>
     </header>
 
     <section class="hero">
@@ -99,11 +59,10 @@ header {
         <p>✓ Experienced Field Team &nbsp; ✓ Pan South India Coverage &nbsp; ✓ Fast Execution</p>
         <div class="hero-btns">
             <a href="#enquiry" class="btn btn-orange">Request Service</a>
-            <a href="#" class="btn btn-blue">Contact Us</a>
         </div>
     </section>
-
-    <section class="clients-section">
+    
+   <section class="clients-section">
         <h3>Our Clients</h3>
         <p style="font-size: 12px; color: #888;">Trusted by Leading Brands</p>
         <div class="client-grid">
@@ -115,16 +74,16 @@ header {
         <h3>Our Services</h3>
         <div class="service-grid">
             <div class="service-card">
-                <h4>External Audits</h4>
-                <p>✓ Mystery, Quality & Compliance </p>
-            </div>
-            <div class="service-card">
-                <h4>Man Power</h4>
-                <p>✓ Staffing</p>
+                <h4>Audits</h4>
+                <p>✓ Qulaity, Mystery & Compliance</p>
             </div>
             <div class="service-card">
                 <h4>Visual Merchandising</h4>
                 <p>✓ Brand Display Setup</p>
+            </div>
+            <div class="service-card">
+                <h4>Man Power</h4>
+                <p>✓ Staffing Services </p>
             </div>
         </div>
     </section>
@@ -147,8 +106,8 @@ header {
                 <select name="service" required>
                     <option value="" disabled selected>Service Required</option>
                     <option value="Audit">Audits</option>
-                    <option value="MP">Man Power</option>
                     <option value="VM">Visual Merchandising</option>
+                    <option value="MP">Man Power</option>
                 </select>
                 <textarea name="message" rows="3" placeholder="Message"></textarea>
                 <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
@@ -157,7 +116,7 @@ header {
         </div>
     </div>
 
-    <a href="https://wa.me/9866905621" class="whatsapp-float" target="_blank">W</a>
+    <a href="https://wa.me/919866905621" class="whatsapp-float" target="_blank">W</a>
 
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxJiJ-cCPmeSipp_zFSwKxzjSH-Q0-a0cMCdJvFzZD7zzhaVb9gJNdK64ya94pUHflz/exec';
