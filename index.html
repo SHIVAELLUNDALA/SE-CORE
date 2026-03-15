@@ -1,105 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>SE Core Business Solutions</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SE Core Business Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+<body class="bg-gray-50 font-sans">
 
-<body>
+    <nav class="bg-white shadow-md py-4 px-8 flex justify-between items-center sticky top-0 z-50">
+        <div class="text-2xl font-bold text-blue-900">SE CORE <span class="text-blue-600 text-sm block leading-none">BUSINESS SOLUTIONS</span></div>
+        <div class="hidden md:flex space-x-6 font-medium text-gray-700">
+            <a href="#" class="hover:text-blue-600">Home</a>
+            <a href="#" class="hover:text-blue-600">About Us</a>
+            <a href="#" class="hover:text-blue-600">Services</a>
+            <a href="#" class="hover:text-blue-600">Clients</a>
+            <a href="#" class="hover:text-blue-600">Contact</a>
+        </div>
+        <button class="bg-orange-500 text-white px-5 py-2 rounded-full font-bold">+91 XXXXXXXX</button>
+    </nav>
 
-<header>
-<h1>SE Core Business Solutions</h1>
-<p>Operational Auditing, Merchandising & Manpower Solutions</p>
+    <header class="relative bg-blue-900 text-white py-20 px-10 overflow-hidden">
+        <div class="max-w-4xl relative z-10">
+            <h1 class="text-5xl font-extrabold mb-4 leading-tight">Audit & Deployment <br> Services Across South India</h1>
+            <p class="text-xl mb-8 opacity-90">External Audits | POSM Deployment | Visual Merchandising | Stock Audits</p>
+            <ul class="space-y-2 mb-10">
+                <li><i class="fas fa-check-circle text-orange-400 mr-2"></i> Experienced Field Team</li>
+                <li><i class="fas fa-check-circle text-orange-400 mr-2"></i> Pan South India Coverage</li>
+                <li><i class="fas fa-check-circle text-orange-400 mr-2"></i> Fast & Reliable Execution</li>
+            </ul>
+            <div class="flex space-x-4">
+                <button class="bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded font-bold transition">Request Service</button>
+                <button class="border-2 border-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded font-bold transition">Contact Us</button>
+            </div>
+        </div>
+        <div class="absolute inset-0 opacity-20 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1534452286362-623b18455c57?auto=format&fit=crop&w=1200&q=80');"></div>
+    </header>
 
-<button onclick="scrollToForm()">Request Business Quote</button>
-</header>
+    <section class="py-16 px-10 max-w-7xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-blue-900 mb-2">Our Services</h2>
+        <div class="w-20 h-1 bg-blue-600 mx-auto mb-12"></div>
+        
+        <div class="grid md:grid-cols-4 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-600">
+                <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-chart-line"></i></div>
+                <h3 class="font-bold text-lg mb-2">External Audits</h3>
+                <p class="text-gray-500 text-sm italic">Compliance & Performance Checks</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-600">
+                <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-box-open"></i></div>
+                <h3 class="font-bold text-lg mb-2">POSM Deployment</h3>
+                <p class="text-gray-500 text-sm italic">Promotional Material Installation</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-600">
+                <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-store"></i></div>
+                <h3 class="font-bold text-lg mb-2">Visual Merchandising</h3>
+                <p class="text-gray-500 text-sm italic">Brand Display Setup</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-600">
+                <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-clipboard-list"></i></div>
+                <h3 class="font-bold text-lg mb-2">Stock Audits</h3>
+                <p class="text-gray-500 text-sm italic">Inventory Verification</p>
+            </div>
+        </div>
+    </section>
 
-<section class="stats">
-
-<div>
-<h2>7+</h2>
-<p>Years Experience</p>
-</div>
-
-<div>
-<h2>1000+</h2>
-<p>Audits Conducted</p>
-</div>
-
-<div>
-<h2>50+</h2>
-<p>Field Executives</p>
-</div>
-
-<div>
-<h2>100+</h2>
-<p>Client Locations</p>
-</div>
-
-</section>
-
-<section class="services">
-
-<h2>Our Services</h2>
-
-<div class="card">
-<h3>Business Auditing</h3>
-<p>Retail store audits, compliance verification.</p>
-</div>
-
-<div class="card">
-<h3>Retail Merchandising</h3>
-<p>Visual merchandising & stock verification.</p>
-</div>
-
-<div class="card">
-<h3>Professional Manpower</h3>
-<p>Field executives and operational support.</p>
-</div>
-
-</section>
-
-<section class="team">
-
-<h2>Our Team</h2>
-
-<div class="member">
-<h3>Shiv Ellundala</h3>
-<p>Founder</p>
-</div>
-
-<div class="member">
-<h3>Ganesh Keta</h3>
-<p>Consultant</p>
-</div>
-
-<div class="member">
-<h3>Sabeeha Begum</h3>
-<p>Project Lead</p>
-</div>
-
-</section>
-
-<section id="contact">
-
-<h2>Contact Us</h2>
-
-<form id="contactForm">
-
-<input type="text" name="name" placeholder="Name" required>
-<input type="email" name="email" placeholder="Email" required>
-<input type="text" name="phone" placeholder="Phone" required>
-
-<textarea name="message" placeholder="Message"></textarea>
-
-<button type="submit">Submit</button>
-
-</form>
-
-</section>
-
-<script src="script.js"></script>
+    <section class="bg-white py-16 px-10 grid md:grid-cols-2 gap-12 max-w-7xl mx-auto">
+        <div>
+            <h2 class="text-3xl font-bold text-blue-900 mb-6">Get In Touch</h2>
+            <div class="space-y-6">
+                <div class="flex items-start">
+                    <i class="fas fa-map-marker-alt text-blue-600 mt-1 mr-4"></i>
+                    <p class="text-gray-700">Hyderabad, India</p>
+                </div>
+                <div class="flex items-start">
+                    <i class="fas fa-phone text-blue-600 mt-1 mr-4"></i>
+                    <p class="text-gray-700">+91 XXXXXXXXXX</p>
+                </div>
+                <div class="flex items-start">
+                    <i class="fas fa-envelope text-blue-600 mt-1 mr-4"></i>
+                    <p class="text-gray-700">info@secorebusiness.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-100 p-8 rounded-lg shadow-inner">
+            <h3 class="text-xl font-bold mb-6 text-blue-900">Enquiry Form</h3>
+            <form class="space-y-4">
+                <input type="text" placeholder="Name" class="w-full p-3 border rounded">
+                <input type="text" placeholder="Company Name" class="w-full p-3 border rounded">
+                <input type="text" placeholder="Phone Number" class="w-full p-3 border rounded">
+                <select class="w-full p-3 border rounded text-gray-500">
+                    <option>Service Required</option>
+                </select>
+                <textarea placeholder="Message" class="w-full p-3 border rounded h-32"></textarea>
+                <button class="w-full bg-blue-700 text-white py-3 rounded font-bold hover:bg-blue-800 transition">Send Message</button>
+            </form>
+        </div>
+    </section>
 
 </body>
 </html>
